@@ -41,13 +41,13 @@ h1 {
 
 .name {
   position: relative;
-  text-align: left;
-  color: #f9dbbd;
+  text-align: right;
+  color: #f2545b;
 }
 
 .first-header {
   position: absolute;
   top: 8px;
-  left: 100px;
-  
+  right: 100px;
+  font-size: 60px;
 }
