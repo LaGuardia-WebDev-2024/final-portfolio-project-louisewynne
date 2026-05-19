@@ -3,6 +3,8 @@
 body {
   padding-top: 30px;
   margin-left: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 /* ⬆⬆⬆⬆ Nav Bar Styling 
 ~~~~~ Taken From: 

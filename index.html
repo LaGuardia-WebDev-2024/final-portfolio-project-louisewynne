@@ -53,6 +53,9 @@ Select ONE Additional Feature to Add
         margin: 30px;
         padding: 20px;
         text-align: justify;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
       .para-1, .para-2{
         display: flex;
@@ -61,8 +64,11 @@ Select ONE Additional Feature to Add
       }
 
       .subhead {
-        writing-mode: vertical-rl;
+        font-family: "Macondo", cursive;
+        font-weight: 400;
+        font-style: normal;
       }
+      
     </style>
   </head>
   <body>
@@ -72,20 +78,6 @@ Select ONE Additional Feature to Add
       <li><a href="contact.html">Contact</a></li>
       <li><a href="art.html">Portfolio</a></li>
       <li><a href="resume.html">Resume</a></li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
     </ul>
 
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
@@ -104,7 +96,7 @@ Select ONE Additional Feature to Add
         </p>
       </div>
       <div class="child-flex para-2">
-        <h2>About My Art</h2>
+        <h2 class="subhead">About My Art</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
           faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
