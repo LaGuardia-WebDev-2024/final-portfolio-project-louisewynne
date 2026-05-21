@@ -9,20 +9,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Macondo&display=swap" rel="stylesheet">
     <style>
       /* Styling Only Related To THIS Page */
-      .parent-flex {
-        display: flex;
-        background-color: purple;
-        justify-content: space-around;
-        padding: 10px;
-        margin-bottom: 20px;
+      
+      img {
+        width: 200px;
+        height: 200px;
+        margin-right: 2%;
       }
 
-      img {
-        max-width: 30%;
-        border-radius: 10px;
-        object-fit: contain;
-        background-color: white;
+      img:hover {
+        filter: brightness(0.6)
       }
+
+      .parent-flex {
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+      }
+
+      .child-flex {
+        display: flex;
+        margin-bottom: 3%;
+      }
+
+      .subhead {
+        margin-top: 80px;
+        margin-left: -30px;
+        transform: rotate(-90deg);
+        background-color: #9dbf9e;
+        width: 200px;
+        text-align: center;
+        padding: 5px;
+        height: fit-content;
+        font-size: 25px;
+      }
+      
     </style>
   </head>
   <body>
@@ -37,21 +57,46 @@
     <h1>My Art</h1>
 
     <div class="parent-flex">
-      <img
-        src="images/HeartIcons.jpeg"
-      />
-      <img
-        src="images/VibeyTunes.png"
-      />
+      <div class="child-flex">
+        <p class="subhead">
+          Paintings
+        </p>
+        <img class="painting1"
+          src="images/South-West_Louise-Wynne_2025.jpg"
+        />
+        <img
+          src="images/VibeyTunes.png"
+        />
+      </div>
     </div>
 
     <div class="parent-flex">
-      <img
-        src="images/VibeyTunes.png"
-      />
-      <img
-        src="images/HeartIcons.jpeg"
-      />
+      <div class="child-flex">
+        <p class="subhead">
+          Drawings
+        </p>
+        <img
+          src="images/VibeyTunes.png"
+        />
+        <img
+          src="images/HeartIcons.jpeg"
+        />
+      </div>
     </div>
+
+    <div class="parent-flex">
+      <div class="child-flex">
+        <p class="subhead">
+          Ceramics
+        </p>
+        <img
+          src="images/VibeyTunes.png"
+        />
+        <img
+          src="images/HeartIcons.jpeg"
+        />
+      </div>
+    </div>
+
   </body>
 </html>
