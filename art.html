@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Macondo&display=swap" rel="stylesheet">
+    <link href="lightbox.css" rel="stylesheet" type="text/css" />
     <style>
       /* Styling Only Related To THIS Page */
       
@@ -17,7 +18,7 @@
       }
 
       img:hover {
-        filter: brightness(0.6)
+        filter: brightness(0.8)
       }
 
       .parent-flex {
@@ -41,6 +42,7 @@
         padding: 5px;
         height: fit-content;
         font-size: 25px;
+        color: #640d14;
       }
 
       .pieceandcaption {
@@ -50,7 +52,24 @@
         width: 400px;
         padding: 0px 10px;
         margin-bottom: 25px;
-  }
+      }
+
+      .title {
+        font-family: "Macondo", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #f9dbbd;
+        margin-left: 10%;
+        margin-top: 5%;
+      }
+
+      .first-header {
+        color: #f9dbbd;
+      }
+
+      .paintingInfo {
+        color: #f9dbbd;
+      }
 
       
     </style>
@@ -64,7 +83,14 @@
       <li><a href="resume.html">Resume</a></li>
     </ul>
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1>My Art</h1>
+
+     <div class="name">
+      <h1 class="first-header">Louise Wynne</h1>
+      <div class="parallax"></div>
+    </div>
+
+    <h1 class="title">My Art</h1>
+
 
     <div class="parent-flex">
       <div class="child-flex">
@@ -81,7 +107,7 @@
             width="400px"
             style="object-position: 25% 35%"
         /></a>
-        <p>
+        <p class="paintingInfo">
           <i>South West </i>, Painting (2025)
         </p>
       </div>
@@ -115,6 +141,38 @@
         />
       </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="lightbox.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 27) {
+            $(".navbarcontainer").addClass("scrolled");
+          } else {
+            $(".navbarcontainer").removeClass("scrolled");
+          }
+        });
+      });
+      
+      const images = [
+            "https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x900.jpg",
+            "https://roelfjan.github.io/object-fit-cover/example-images/example1@1200x600.jpg","https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        const imgElement = document.getElementById("switchImage");
+
+        imgElement.addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+        });
+     
+      
+    </script>
+
 
   </body>
 </html>
